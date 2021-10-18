@@ -15,6 +15,8 @@ class CreateReasonForsTable extends Migration
     {
         Schema::create('reason_fors', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->enum('status', [0,1]);
             $table->timestamps();
         });
     }
